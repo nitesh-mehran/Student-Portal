@@ -6,5 +6,6 @@ router.post('/adminsubmit', adminC.admindata)
 router.get('/admin', adminC.login , )
 router.get('/admin-login', adminC.login , )
 
+router.get('/adminreg', adminC.adminregpage)
 
 module.exports = router

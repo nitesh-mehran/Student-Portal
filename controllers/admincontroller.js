@@ -8,17 +8,23 @@ exports.admin = async(req, res)=>{
 }        
 
 exports.admindata = (req, res)=>{
-    const { email , password } = req.body
+    const {ausername, aemail , apassword } = req.body
 
     const form = new admin({
-        adminEmail : email,
-        adminPassword : password
+        adminUsername : ausername,
+        adminEmail : aemail,
+        adminPassword : apassword
     })
     form.save()
-    res.redirect('dashboard')
+    res.redirect('admin-login')
 }
 
 exports.login = (req,res)=>{
     res.render("adminlogin")
-    res.redirect('/admin')
+    // res.redirect('/admin')
 }
+
+exports.adminregpage = async(req, res)=>{
+   
+    res.render('adminregistration')
+}        

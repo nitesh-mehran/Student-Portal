@@ -4,21 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Portal Registration</title>
-    <link rel="stylesheet" href="reg.css">
+    <link rel="stylesheet" href="adminreg.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
 </head>
 <body>
+    <nav class="navbar">
+        <div class="logo">Admin Portal</div>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+        <div class="admin-btn">
+          <a href="/" class="btnlogo"><i class="fa-solid fa-user-group"></i></a>
+        </div>
+      </nav>
+    
     <div class="container">
         <div class="form-box">
-            <h1>Student Portal</h1>
+            <h1>Admin Portal</h1>
             <p class="subtext">Sign up to access your account</p>
             <form action="/adminsubmit" method="POST">
-                <input type="username" name="username" placeholder="Username" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="password" name="password" placeholder="Password" required>
+                <input type="username" name="ausername" placeholder="Username" required>
+                <input type="email" name="aemail" placeholder="Email" required>
+                <input type="password" name="apassword" placeholder="Password" required>
                 <button type="submit">Sign Up</button>
             </form>
-            <p class="login-link">Already have an account? <a href="#">Log in</a></p>
+            <p class="login-link">Already have an account? <a href="/admin-login">Log in</a></p>
         </div>
     </div>
+    <footer class="footer">
+        <p>&copy; 2025 Student Portal. All rights reserved.</p>
+      </footer>
 </body>
 </html>
