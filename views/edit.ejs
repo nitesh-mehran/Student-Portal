@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Student</title>
+    <link rel="stylesheet" href="/edit.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Student Portal</div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+        <div class="admin-btn">
+            <a href="/admin-login" class="btn"><i class="fa-solid fa-user-tie"></i></a>
+        </div>
+    </nav>
+    <div class="formBox">
+        <div class="container">
+            <h2>Edit Student</h2>
+            <form action="/update/<%= record.id %>" method="post">
+                <label for="name">Student Name:</label>
+                <input type="text" id="name" name="name" value="<%= record.stuName %>" required>
+
+                <label for="age">Student Age:</label>
+                <input type="number" id="age" name="age" value="<%= record.stuAge %>" required>
+
+                <label for="email">Student Email:</label>
+                <input type="email" id="email" name="email" value="<%= record.stuEmail %>" required>
+
+                <label for="fees">Student Fees:</label>
+                <input type="number" id="fees" name="fees" value="<%= record.stuFees %>" required>
+                    <button type="submit">Update</button>
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2025 Student Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>

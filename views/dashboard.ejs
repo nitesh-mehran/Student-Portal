@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Student Portal</title>
+    <link rel="stylesheet" href="/dash.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Admin Portal</div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+    
+        <div class="admin-btn">
+          <a href="/" class="btn"><i class="fa-solid fa-user-group"></i></a>
+        </div>
+      </nav>
+      <div class="formBox">
+
+    <div class="container">
+        <h2>Student Dashboard</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>S.No.</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Email</th>
+                        <th>Fees</th>
+                        <th>Delete</th>
+                        <th>Edit </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% record.forEach((item, index) => { %>
+                        <tr>
+                            <td><%= index+1 %></td>
+                            <td><%= item.stuName %></td>
+                            <td><%= item.stuAge %></td>
+                            <td><%= item.stuEmail %></td>
+                            <td><%= item.stuFees %></td>
+                            <td>
+                                <a href="/delete/<%= item.id %>">
+                                    <button class="delete-btn">
+                                        <i class="fa-solid fa-trash-can"></i> 
+                                    </button>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/edit/<%= item.id %>">
+                                    <button class="edit-btn">
+                                        <i class="fa-solid fa-pencil"></i> 
+                                    </button>
+                                </a>
+                            </td>
+                            
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <p>&copy; 2025 Student Portal. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+

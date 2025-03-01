@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login | Student Portal</title>
+  <link rel="stylesheet" href="login.css">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+</head>
+<body>
+  <nav class="navbar">
+      <div class="logo">Admin Portal</div>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+      <div class="admin-btn">
+        <a href="/" class="btnlogo"><i class="fa-solid fa-user-group"></i></a>
+      </div>
+    </nav>
+  <div class="formBox">
+    <div class="container">
+      <h2>Admin Login</h2>
+      <form action="/admin" method="get" onsubmit="return validateLogin()">
+        <label for="admin-email">Email:</label>
+        <input type="email" id="admin-email" name="email" placeholder="Enter admin email" required>
+        
+        <label for="admin-password">Password:</label>
+        <input type="password" id="admin-password" name="password" placeholder="Enter password" required>
+
+        <a href="/admin"><button type="submit">Login</button></a>
+
+      </form>
+    </div>
+  </div>
+  <footer class="footer">
+    <p>&copy; 2025 Student Portal. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
