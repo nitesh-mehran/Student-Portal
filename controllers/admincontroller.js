@@ -2,7 +2,7 @@ const admin = require('../models/admin')
 
 
 
-exports.admin = async(req, res)=>{
+exports.admindashboard = async(req, res)=>{
    
     res.render('dashboard')
 }        
@@ -19,9 +19,8 @@ exports.admindata = (req, res)=>{
     res.redirect('admin-login')
 }
 
-exports.login = (req,res)=>{
+exports.loginpage = (req,res)=>{
     res.render("adminlogin")
-    // res.redirect('/admin')
 }
 
 exports.adminregpage = async(req, res)=>{

@@ -1,10 +1,18 @@
 const router = require('express').Router()
 const stuC = require('../controllers/stucontroller')
 
+// function handlelogin(req, res, next)  {
+//     if (req.session.isAuthenticated ) {
+//       next(); 
+//     } else {
+//       res.redirect("/startlogin"); 
+//     }
+//   };
+  
 
-router.get('/', stuC.homepage)
+router.get('/home', stuC.homepage)
 router.post('/submit', stuC.sendData)
-router.get('/success', stuC.success , )
+router.get('/success' , stuC.success , )
 router.get('/admin', stuC.admindash , )
 router.get('/delete/:id', stuC.removeData , )
 

@@ -1,11 +1,9 @@
-const router = require('express').Router()
-const adminC = require('../controllers/admincontroller')
+const router = require("express").Router();
+const adminC = require("../controllers/admincontroller");
 
-router.get('/admin', adminC.admin)
-router.post('/adminsubmit', adminC.admindata)
-router.get('/admin', adminC.login , )
-router.get('/admin-login', adminC.login , )
+router.get("/admin", adminC.admindashboard);
+router.post("/adminsubmit", adminC.admindata);
+router.get("/admin-login", adminC.loginpage);
+router.get("/adminreg", adminC.adminregpage);
 
-router.get('/adminreg', adminC.adminregpage)
-
-module.exports = router
+module.exports = router;
